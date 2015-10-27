@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        "outDir": "../dist",
+        "rootDir": ".",
+        "sourceMap": false,
+        "declaration": true
+    },
+    "filesGlob": [
+        "*.ts"
+    ],
+    "files": [
+        "_gulp.ts",
+        "build.ts",
+        "clean.ts",
+        "dist.ts",
+        "index.ts",
+        "paths.ts",
+        "publish.ts",
+        "script.ts",
+        "serve.ts",
+        "style.ts",
+        "utils.ts"
+    ],
+    "exclude": []
+}

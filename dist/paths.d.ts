@@ -1,0 +1,15 @@
+export declare const BUILD_DIR: string;
+export declare const DIST_DIR: string;
+export declare const SRC_DIR: string;
+export declare const TMP_DIR: string;
+export declare const BUILD_ALL: any;
+export declare const SRC_ALL: any;
+export declare const SRC_HTML: any;
+export declare const SRC_INDEX_HTML: any;
+export declare const SRC_SCRIPT: any;
+export declare const SRC_STYLE: any;
+export declare const TMP_IMAGE: any;
+export declare const INDEX_SCRIPT: string;
+export declare const BUILD_INDEX_JS: any;
+export declare const TMP_INDEX_JS: any;
+export declare const SETTINGS: string;

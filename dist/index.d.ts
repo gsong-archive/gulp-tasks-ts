@@ -1,0 +1,1 @@
+export { makeSettings } from './build';
