@@ -11,6 +11,7 @@ export declare const SRC_SCRIPT_ALL: string;
 export declare const SRC_STYLE: string;
 export declare const TMP_IMAGE: string;
 export declare const GULP_FILES: string[];
+export declare const INDEX_SCRIPT_BASE: string;
 export declare const INDEX_SCRIPT: string;
 export declare const BUILD_INDEX_JS: string;
 export declare const TMP_INDEX_JS: string;

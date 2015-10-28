@@ -1,7 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 var runSequence = require("run-sequence");
-var systemjs_builder_1 = require("systemjs-builder");
+var Builder = require("systemjs-builder");
 var gulpLoadPlugins = require("gulp-load-plugins");
 require("./clean");
 require("./script");
@@ -21,8 +21,8 @@ function makeSettings(environments) {
 }
 exports.makeSettings = makeSettings;
 _gulp_1.default.task("build:jspm", ["compile:styles", "js:lint"], function (cb) {
-    var builder = new systemjs_builder_1.default(paths.TMP_DIR, path.join(paths.TMP_DIR, "config.js"));
-    return builder.buildStatic(paths.INDEX_SCRIPT, paths.BUILD_INDEX_JS, { runtime: true })
+    var builder = new Builder(paths.TMP_DIR, path.join(paths.TMP_DIR, "config.js"));
+    return builder.buildStatic(paths.INDEX_SCRIPT_BASE, paths.BUILD_INDEX_JS, { runtime: true })
         .catch(function (err) { return cb(err); });
 });
 _gulp_1.default.task("build:js", function (callback) { return runSequence("build:jspm", "js:replace_paths", callback); });

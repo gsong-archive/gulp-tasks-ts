@@ -18,9 +18,8 @@ exports.GULP_FILES = [
     "gulpfile.babel.ts",
     path.join(exports.SRC_DIR, "config/environments.ts")
 ];
-// Build time internal app paths
-var INDEX_SCRIPT_BASE = "index";
-exports.INDEX_SCRIPT = INDEX_SCRIPT_BASE + ".js";
+exports.INDEX_SCRIPT_BASE = "index";
+exports.INDEX_SCRIPT = exports.INDEX_SCRIPT_BASE + ".js";
 exports.BUILD_INDEX_JS = path.join(exports.BUILD_DIR, exports.INDEX_SCRIPT);
-exports.TMP_INDEX_JS = path.join(exports.TMP_DIR, INDEX_SCRIPT_BASE);
+exports.TMP_INDEX_JS = path.join(exports.TMP_DIR, exports.INDEX_SCRIPT_BASE);
 exports.SETTINGS = path.join(exports.SRC_DIR, "config/settings.ts");
