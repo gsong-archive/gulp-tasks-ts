@@ -69,7 +69,7 @@ gulp.task("serve:dev", [
   browserSync(opts, done);
 
   gulp.watch(paths.SRC_HTML, ["reload"]).on("change", reportChange);
-  gulp.watch(paths.SRC_SCRIPT, ["js:lint", "reload"])
+  gulp.watch(paths.SRC_SCRIPT_ALL, ["js:lint", "reload"])
   .on("change", reportChange);
   gulp.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
   .on("change", reportChange);
