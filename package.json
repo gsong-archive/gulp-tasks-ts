@@ -1,7 +1,7 @@
 {
   "name": "gulp-tasks-ts",
   "version": "0.0.1",
-  "description": "Gulp tasks for ES6/Babel based projects",
+  "description": "Gulp tasks for TypeScript based projects",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
