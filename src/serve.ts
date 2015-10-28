@@ -1,16 +1,18 @@
-import browserSync from 'browser-sync';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import runSequence from 'run-sequence';
+declare let $;
 
-import './build';
-import './dist';
-import './script';
-import './style';
-import * as paths from './paths';
-import gulp from './_gulp';
+import * as browserSync from "browser-sync";
+import * as runSequence from "run-sequence";
+import gulpLoadPlugins = require("gulp-load-plugins");
+
+import "./build";
+import "./dist";
+import "./script";
+import "./style";
+import * as paths from "./paths";
+import gulp from "./_gulp";
 
 
-const $ = gulpLoadPlugins();
+$ = gulpLoadPlugins();
 
 const BS_OPTIONS = {
   ghostMode: false,
@@ -22,7 +24,7 @@ const BS_OPTIONS = {
 const BS_SERVER_OPTIONS = {
     baseDir: [paths.SRC_DIR, paths.TMP_DIR],
     middleware: (req, res, next) => {
-      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader("Access-Control-Allow-Origin", "*");
       next();
     }
 };
@@ -42,43 +44,43 @@ function _serve(baseDir, reloadTasks, done) {
   const opts = Object.assign({}, BS_OPTIONS, {server: serverOpts});
   browserSync(opts, done);
 
-  return gulp.watch(paths.SRC_ALL, reloadTasks).on('change', reportChange);
+  return gulp.watch(paths.SRC_ALL, reloadTasks).on("change", reportChange);
 }
 
 
-gulp.task('reload', () => browserSync.reload());
+gulp.task("reload", () => browserSync.reload());
 
 
-gulp.task('reload:build', (callback) => {
-  return runSequence('build', 'reload', callback);
+gulp.task("reload:build", (callback) => {
+  return runSequence("build", "reload", callback);
 });
 
 
-gulp.task('reload:dist', (callback) => {
-  return runSequence('dist', 'reload', callback);
+gulp.task("reload:dist", (callback) => {
+  return runSequence("dist", "reload", callback);
 });
 
 
-gulp.task('serve:dev', [
-  'build:make-settings', 'compile:styles', 'js:lint'
+gulp.task("serve:dev", [
+  "build:make-settings", "compile:styles", "js:lint"
 ], (done) => {
   const opts = Object.assign({}, BS_OPTIONS, {server: BS_SERVER_OPTIONS});
 
   browserSync(opts, done);
 
-  gulp.watch(paths.SRC_HTML, ['reload']).on('change', reportChange);
-  gulp.watch(paths.SRC_SCRIPT, ['js:lint', 'reload'])
-  .on('change', reportChange);
-  gulp.watch(paths.SRC_STYLE, ['compile:styles', 'reload'])
-  .on('change', reportChange);
+  gulp.watch(paths.SRC_HTML, ["reload"]).on("change", reportChange);
+  gulp.watch(paths.SRC_SCRIPT, ["js:lint", "reload"])
+  .on("change", reportChange);
+  gulp.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
+  .on("change", reportChange);
 });
 
 
-gulp.task('serve:build', ['build'], (done) => {
-  _serve([paths.BUILD_DIR], ['reload:build'], done);
+gulp.task("serve:build", ["build"], (done) => {
+  _serve([paths.BUILD_DIR], ["reload:build"], done);
 });
 
 
-gulp.task('serve:dist', ['dist'], (done) => {
-  _serve([paths.DIST_DIR], ['reload:dist'], done);
+gulp.task("serve:dist", ["dist"], (done) => {
+  _serve([paths.DIST_DIR], ["reload:dist"], done);
 });

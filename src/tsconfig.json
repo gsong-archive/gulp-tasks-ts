@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "umd",
         "target": "es5",
         "noImplicitAny": false,
         "outDir": "../dist",
@@ -9,12 +9,14 @@
         "declaration": true
     },
     "filesGlob": [
-        "*.ts"
+        "*.ts",
+        "typings/tsd.d.ts"
     ],
     "files": [
         "_gulp.ts",
         "build.ts",
         "clean.ts",
+        "custom-typings.d.ts",
         "dist.ts",
         "index.ts",
         "paths.ts",
@@ -22,7 +24,8 @@
         "script.ts",
         "serve.ts",
         "style.ts",
-        "utils.ts"
+        "utils.ts",
+        "typings/tsd.d.ts"
     ],
     "exclude": []
 }

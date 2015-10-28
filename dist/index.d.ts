@@ -1,1 +1,1 @@
-export { makeSettings } from './build';
+export { makeSettings } from "./build";
