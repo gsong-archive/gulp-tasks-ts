@@ -21,7 +21,7 @@ $ = gulpLoadPlugins();
 export function makeSettings(environments) {
   gulp.task("build:make-settings", () => {
     const env = process.env.ENV || "development";
-    const outfile = path.join(paths.SRC_DIR, paths.SETTINGS);
+    const outfile = paths.SETTINGS;
     const settings = environments[env];
     $.util.log(settings);
 
