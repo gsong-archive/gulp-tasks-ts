@@ -1,10 +1,11 @@
 declare module "systemjs-builder" {
-  export default class {
+  class Builder {
     constructor(rootDir: string, oufFile: string)
     buildStatic(src: string, dst: string, options: any)
   }
-}
 
+  export = Builder;
+}
 
 declare module "gh-pages" {
   export function publish(outDir: string, cb: any)

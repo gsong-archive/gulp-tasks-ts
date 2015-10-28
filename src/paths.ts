@@ -26,7 +26,7 @@ export const GULP_FILES = [
 ];
 
 // Build time internal app paths
-const INDEX_SCRIPT_BASE = "index";
+export const INDEX_SCRIPT_BASE = "index";
 export const INDEX_SCRIPT = `${INDEX_SCRIPT_BASE}.js`;
 export const BUILD_INDEX_JS = path.join(BUILD_DIR, INDEX_SCRIPT);
 export const TMP_INDEX_JS = path.join(TMP_DIR, INDEX_SCRIPT_BASE);

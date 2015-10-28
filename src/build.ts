@@ -4,7 +4,7 @@ import * as fs from "fs";
 import * as path from "path";
 
 import * as runSequence from "run-sequence";
-import Builder from "systemjs-builder";
+import Builder = require("systemjs-builder");
 import gulpLoadPlugins = require("gulp-load-plugins");
 
 import "./clean";
@@ -40,7 +40,7 @@ gulp.task("build:jspm", ["compile:styles", "js:lint"], (cb) => {
     paths.TMP_DIR, path.join(paths.TMP_DIR, "config.js")
   );
   return builder.buildStatic(
-    paths.INDEX_SCRIPT, paths.BUILD_INDEX_JS, {runtime: true}
+    paths.INDEX_SCRIPT_BASE, paths.BUILD_INDEX_JS, {runtime: true}
   )
   .catch((err) => cb(err));
 });
