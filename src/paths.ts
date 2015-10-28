@@ -21,7 +21,7 @@ export const SRC_STYLE = path.join(SRC_DIR, "**/*.scss");
 export const TMP_IMAGE = path.join(TMP_DIR, "**/*.+(png|jpg|svg)");
 
 export const GULP_FILES = [
-  "gulpfile.babel.js",
+  "gulpfile.babel.ts",
   path.join(SRC_DIR, "config/environments.ts")
 ];
 
