@@ -14,6 +14,11 @@ exports.SRC_SCRIPT = [
 exports.SRC_SCRIPT_ALL = path.join(exports.SRC_DIR, "**/*.{js,ts}");
 exports.SRC_STYLE = path.join(exports.SRC_DIR, "**/*.scss");
 exports.TMP_IMAGE = path.join(exports.TMP_DIR, "**/*.+(png|jpg|svg)");
+exports.GULP_FILES = [
+    "gulpfile.babel.ts",
+    path.join(exports.SRC_DIR, "config/environments.ts")
+];
+// Build time internal app paths
 var INDEX_SCRIPT_BASE = "index";
 exports.INDEX_SCRIPT = INDEX_SCRIPT_BASE + ".js";
 exports.BUILD_INDEX_JS = path.join(exports.BUILD_DIR, exports.INDEX_SCRIPT);

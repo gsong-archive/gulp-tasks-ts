@@ -3,6 +3,7 @@ var runSequence = require("run-sequence");
 var gulpLoadPlugins = require("gulp-load-plugins");
 require("./build");
 require("./dist");
+require("./gulpfile");
 require("./script");
 require("./style");
 var paths = require("./paths");
@@ -46,6 +47,8 @@ _gulp_1.default.task("serve:dev", [
     _gulp_1.default.watch(paths.SRC_SCRIPT_ALL, ["js:lint", "reload"])
         .on("change", reportChange);
     _gulp_1.default.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
+        .on("change", reportChange);
+    _gulp_1.default.watch(paths.GULP_FILES, ["gulpfile:build", "reload"])
         .on("change", reportChange);
 });
 _gulp_1.default.task("serve:build", ["build"], function (done) {
