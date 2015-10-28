@@ -18,6 +18,7 @@
         "clean.ts",
         "custom-typings.d.ts",
         "dist.ts",
+        "gulpfile.ts",
         "index.ts",
         "paths.ts",
         "publish.ts",

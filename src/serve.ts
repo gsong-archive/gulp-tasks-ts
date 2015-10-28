@@ -6,6 +6,7 @@ import gulpLoadPlugins = require("gulp-load-plugins");
 
 import "./build";
 import "./dist";
+import "./gulpfile";
 import "./script";
 import "./style";
 import * as paths from "./paths";
@@ -69,9 +70,14 @@ gulp.task("serve:dev", [
   browserSync(opts, done);
 
   gulp.watch(paths.SRC_HTML, ["reload"]).on("change", reportChange);
+
   gulp.watch(paths.SRC_SCRIPT_ALL, ["js:lint", "reload"])
   .on("change", reportChange);
+
   gulp.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
+  .on("change", reportChange);
+
+  gulp.watch(paths.GULP_FILES, ["gulpfile:build", "reload"])
   .on("change", reportChange);
 });
 

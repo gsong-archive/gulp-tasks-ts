@@ -20,6 +20,11 @@ export const SRC_STYLE = path.join(SRC_DIR, "**/*.scss");
 
 export const TMP_IMAGE = path.join(TMP_DIR, "**/*.+(png|jpg|svg)");
 
+export const GULP_FILES = [
+  "gulpfile.babel.js",
+  path.join(SRC_DIR, "config/environments.ts")
+];
+
 // Build time internal app paths
 const INDEX_SCRIPT_BASE = "index";
 export const INDEX_SCRIPT = `${INDEX_SCRIPT_BASE}.js`;
