@@ -10,9 +10,8 @@ $ = gulpLoadPlugins();
 
 
 gulp.task("js:lint", () => gulp.src(paths.SRC_SCRIPT)
-  .pipe($.eslint())
-  .pipe($.eslint.formatEach())
-  .pipe($.eslint.failAfterError())
+  .pipe($.tslint())
+  .pipe($.tslint.report("verbose"))
 );
 
 
