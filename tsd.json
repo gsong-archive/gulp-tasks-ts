@@ -6,43 +6,43 @@
   "bundle": "src/typings/tsd.d.ts",
   "installed": {
     "node/node.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "q/Q.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "orchestrator/orchestrator.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "gulp/gulp.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "gulp-load-plugins/gulp-load-plugins.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "run-sequence/run-sequence.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "glob/glob.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "del/del.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "minimatch/minimatch.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "es6-promise/es6-promise.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "vinyl-paths/vinyl-paths.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "chokidar/chokidar.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     },
     "browser-sync/browser-sync.d.ts": {
-      "commit": "62eedc3121a5e28c50473d2e4a9cefbcb9c3957f"
+      "commit": "c560ba6f0f55ce6f50e9d06e37b5bc0e2b9117b0"
     }
   }
 }
