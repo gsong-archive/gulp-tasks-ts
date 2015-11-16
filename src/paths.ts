@@ -8,12 +8,12 @@ export const TMP_DIR = ".tmp/";
 
 export const BUILD_ALL = path.join(BUILD_DIR, "**/*");
 
-const _SRC_EXCLUDE = `!${path.join(SRC_DIR, "jspm_packages/**/*")}`;
+const _SRC_EXCLUDE = `!${path.join(SRC_DIR, "{jspm_packages,typings}/**/*")}`;
 export const SRC_ALL = path.join(SRC_DIR, "**/*");
 export const SRC_HTML = path.join(SRC_DIR, "**/*.html");
 export const SRC_INDEX_HTML = path.join(SRC_DIR, "index.html");
 export const SRC_SCRIPT_ALL = path.join(SRC_DIR, "**/*.{js,ts}");
-export const SRC_SCRIPT = [_SRC_EXCLUDE, SRC_SCRIPT_ALL];
+export const SRC_SCRIPT = [_SRC_EXCLUDE, path.join(SRC_DIR, "**/*.ts")];
 export const SRC_STYLE_ALL = path.join(SRC_DIR, "**/*.scss");
 export const SRC_STYLE = [_SRC_EXCLUDE, SRC_STYLE_ALL];
 
