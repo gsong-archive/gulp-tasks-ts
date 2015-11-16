@@ -1,4 +1,4 @@
-# Gulp Tasks For jspm / Babel 6 Based Angular Projects
+# Gulp Tasks For jspm / TypeScript Based Angular Projects
 
 ## Summary
 
@@ -26,7 +26,7 @@ npm install gsong/gulp-tasks-ts[#version-number]
 ## How To Use
 
 These tasks are meant to be installed in an Angular project and used via the
-project's `gulpfile.babel.ts`. For example:
+project's `gulpfile.ts`. For example:
 
 ```js
 import {makeSettings} from "gulp-tasks-ts";
