@@ -46,7 +46,7 @@ _gulp_1.default.task("serve:dev", [
     _gulp_1.default.watch(paths.SRC_HTML, ["reload"]).on("change", reportChange);
     _gulp_1.default.watch(paths.SRC_SCRIPT_ALL, ["js:lint", "reload"])
         .on("change", reportChange);
-    _gulp_1.default.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
+    _gulp_1.default.watch(paths.SRC_STYLE_ALL, ["compile:styles", "reload"])
         .on("change", reportChange);
     _gulp_1.default.watch(paths.GULP_FILES, ["gulpfile:build", "reload"])
         .on("change", reportChange);

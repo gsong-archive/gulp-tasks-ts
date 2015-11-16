@@ -4,15 +4,14 @@ exports.DIST_DIR = "dist/";
 exports.SRC_DIR = "src/";
 exports.TMP_DIR = ".tmp/";
 exports.BUILD_ALL = path.join(exports.BUILD_DIR, "**/*");
+var _SRC_EXCLUDE = "!" + path.join(exports.SRC_DIR, "jspm_packages/**/*");
 exports.SRC_ALL = path.join(exports.SRC_DIR, "**/*");
 exports.SRC_HTML = path.join(exports.SRC_DIR, "**/*.html");
 exports.SRC_INDEX_HTML = path.join(exports.SRC_DIR, "index.html");
-exports.SRC_SCRIPT = [
-    ("!" + path.join(exports.SRC_DIR, "{jspm_packages,typings}/**/*")),
-    path.join(exports.SRC_DIR, "**/*.ts")
-];
 exports.SRC_SCRIPT_ALL = path.join(exports.SRC_DIR, "**/*.{js,ts}");
-exports.SRC_STYLE = path.join(exports.SRC_DIR, "**/*.scss");
+exports.SRC_SCRIPT = [_SRC_EXCLUDE, exports.SRC_SCRIPT_ALL];
+exports.SRC_STYLE_ALL = path.join(exports.SRC_DIR, "**/*.scss");
+exports.SRC_STYLE = [_SRC_EXCLUDE, exports.SRC_STYLE_ALL];
 exports.TMP_IMAGE = path.join(exports.TMP_DIR, "**/*.+(png|jpg|svg)");
 exports.GULP_FILES = [
     "gulpfile.babel.ts",

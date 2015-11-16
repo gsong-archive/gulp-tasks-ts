@@ -74,7 +74,7 @@ gulp.task("serve:dev", [
   gulp.watch(paths.SRC_SCRIPT_ALL, ["js:lint", "reload"])
   .on("change", reportChange);
 
-  gulp.watch(paths.SRC_STYLE, ["compile:styles", "reload"])
+  gulp.watch(paths.SRC_STYLE_ALL, ["compile:styles", "reload"])
   .on("change", reportChange);
 
   gulp.watch(paths.GULP_FILES, ["gulpfile:build", "reload"])
