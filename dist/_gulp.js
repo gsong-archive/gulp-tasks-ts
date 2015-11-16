@@ -6,7 +6,7 @@ gulp.src = function (globs, options) { return _gulpsrc.apply(gulp, [globs, optio
     .pipe($.plumber({
     errorHandler: function (err) {
         $.notify.onError({
-            title: err.name, message: err.message, sound: "Sosumi"
+            title: err.name, message: err.plugin + " " + err.message, sound: "Sosumi"
         })(err);
         this.emit("end");
     }
